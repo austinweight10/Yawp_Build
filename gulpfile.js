@@ -14,11 +14,24 @@
 	var svgmin = require('gulp-svgmin');
 	var imagemin = require('gulp-imagemin');
 
-//
+	// browserSync
+	var browserSync = require('browser-sync').create();
+
+	// browserSync
+	gulp.task('serve', function() {
+
+	browserSync.init(null, {
+		 proxy:"localhost:8888/Yawp_Build/Yawp_Build/"
+	});
+
+	gulp.watch(".prod/css/*.css").on('change', browserSync.reload);
+	gulp.watch(".*.html").on('change', browserSync.reload);
+	});
+
 
 	// compile all your Sass
 		gulp.task('sass', function (){
-			gulp.src(['./dev/sass/*.scss', '!./dev/sass/base'])
+			gulp.src(['./dev/sass/*.scss', '!./dev/sass/base', '!./dev/sass/layout', '!./dev/sass/utils'])
 				.pipe(sass({
 					includePaths: ['./dev/sass/layout', './dev/sass/base', './dev/sass/utils'],
 					outputStyle: 'expanded'
@@ -29,6 +42,7 @@
 				.pipe(gulp.dest('./dev/css'))
 				.pipe(minifycss())
 				.pipe(gulp.dest('./prod/css'));
+				//.pipe(reload({stream: true}));
 		});
 
 	// Uglify JS
@@ -53,9 +67,11 @@
 			.pipe(gulp.dest('./prod/img'));
 		});
 
-//
 
-	gulp.task('default', function(){
+
+
+		// Defalt watch
+	gulp.task('default', ['serve'], function(){
 
 		// watch me getting Sassy
 		gulp.watch("./dev/sass/**/*.scss", function(event){
@@ -70,4 +86,5 @@
 			gulp.run('imagemin');
 			gulp.run('svgmin');
 		});
+
 	});

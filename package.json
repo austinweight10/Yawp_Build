@@ -52,6 +52,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^5.0.0-beta4",
+    "browser-sync": "^2.12.10",
     "eslint": "^1.10.3",
     "eslint-plugin-babel": "^3.0.0",
     "ghooks": "^1.0.1",
@@ -62,6 +63,7 @@
     "gulp-imagemin": "^3.0.1",
     "gulp-install": "^0.6.0",
     "gulp-jsonlint": "^1.1.2",
+    "gulp-livereload": "^3.8.1",
     "gulp-nodeunit": "0.0.5",
     "gulp-sass": "^2.3.1",
     "gulp-size": "^2.1.0",
