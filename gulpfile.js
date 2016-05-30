@@ -61,7 +61,7 @@
 		});
 
 		gulp.task('imagemin', function () {
-			gulp.src('./dev/img/**/*')
+			gulp.src('./dev/img/png_jpg/*')
 			.pipe(imagemin())
 			.pipe(gulp.dest('./dev/img'))
 			.pipe(gulp.dest('./prod/img'));
