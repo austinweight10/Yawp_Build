@@ -1,0 +1,207 @@
+.type-product {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  direction:ltr;
+  .onsale {
+    display: none;
+  }
+  .images {
+    display: none;
+  }
+  .product_title {
+    display: none;
+  }
+  .wc-tabs {
+    display: none;
+  }
+  .woocommerce-Tabs-panel--additional_information {
+    display: none;
+  }
+  .woocommerce-Tabs-panel--reviews {
+    display: none;
+  }
+  .woocommerce-Tabs-panel--description {
+    h2 {
+      display: none;
+    }
+  }
+  .entry-summary {
+    float: right;
+    width: 100%;
+    display: block;
+    padding: 20px;
+    order: 2
+  }
+  .swiper-scrollbar {
+    opacity: 1 !important;
+  }
+  .swiper-container {
+    width: 100%;
+    max-height: 1000px;
+    p {
+      display: none;
+    }
+  }
+  .swiper-scrollbar {
+    display: none;
+  }
+  .swiper-pagination {
+    margin-top: -50px;
+    position: relative;
+    display: block;
+  }
+  .woocommerce-tabs  {
+    float: left;
+    width: calc(100% - 20px);
+    display: block;
+    order: 1;
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+  .pdp-discription {
+    font-family: 'Quicksand', sans-serif;
+    color: #797979;
+  }
+  h3 {
+    font-family: 'Quicksand', sans-serif;
+    color: #797979;
+    font-size: 22px;
+    margin: 35px 0 8px 0;
+  }
+  .menu-menu-closepdp {
+    line-height: 13px;
+    font-size: 14px;
+    text-transform: lowercase;
+    color: #797979;
+    font-weight: 300;
+    border-bottom: 1px solid #797979;
+    cursor: pointer;
+    position: relative;
+    top: 11px;
+    font-weight: 300;
+    display: inline-block;
+    right: 0px;
+    width: 37px;
+    float: right;
+  }
+  p {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    padding: 10px 0;
+    line-height: 19px;
+    color: #797979;
+  }
+  .in-stock {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    color: #797979;
+    .price {
+
+    }
+  }
+  .single_add_to_cart_button{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 25px;
+    text-align: center;
+    margin: auto;
+    background: white;
+    width: calc(100% - 5px);
+    border: 1px solid #000;
+    position: absolute;
+    line-height: 38px;
+    height: 44px;
+    color: #797979;
+    text-decoration: none;
+    margin: 40px 0;
+    display: block;
+    position: relative;
+    transition: 0.5s;
+    &:hover {
+      background-color: #dcdcdc;
+      transition: 0.5s;
+    }
+  }
+  .swiper-container {
+    background: #edf2f5;
+    margin: 10px;
+  }
+  .panel {
+    background: #edf2f5;
+    margin-bottom: 0px;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+  }
+  .quantity {
+    input {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 16px;
+      color: #797979;
+      &:before {
+        content: 'QTY';
+      }
+    }
+  }
+  .swiper-pagination-bullet-active {
+    color: white;
+    background: white;
+  }
+  .swiper-button-next {
+    background: url(/Yawp_Build/Yawp_Build/dev/img/svg/arrow-right.svg);
+  }
+  .swiper-button-prev {
+    background: url(/Yawp_Build/Yawp_Build/dev/img/svg/arrow-left.svg);
+  }
+  .woocommerce-Price-amount {
+    display: block;
+    &:last-child {
+      display: none;
+    }
+  }
+}
+
+.woocommerce-checkout-review-order-table {
+  width: calc(100% - 60px);
+  display: table;
+  .order-total {
+    td {
+      width: 1%;
+    }
+  }
+}
+
+.pdpinfo {
+  top: 20%;
+  display: block;
+  position: fixed;
+  width: 60%;
+  right: 0px;
+  overflow: hidden;
+  z-index: 4;
+  background: #edf2f5;
+  height: auto;
+  overflow-y: scroll;
+  direction:rtl;
+  max-height: 80vh;
+}
+
+
+@media (min-width: 1170px) {
+  .type-product {
+    display: block;
+    .single_add_to_cart_button{
+      width: calc(100% - 5px);
+    }
+    .entry-summary {
+      width: 38%;
+    }
+    .woocommerce-tabs  {
+      width: 60%;
+    }
+    .woocommerce-checkout-review-order-table {
+      width: 60%;
+    }
+  }
+}

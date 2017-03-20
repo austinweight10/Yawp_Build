@@ -17,23 +17,30 @@
 	// browserSync
 	var browserSync = require('browser-sync').create();
 
+	// copy
+	var copy = require('gulp-contrib-copy');
+
+	// clean
+	var clean = require('gulp-clean');
+
 	// browserSync
 	gulp.task('serve', function() {
 
+		// google cache causeig not to update css js etc..
+
 	browserSync.init(null, {
-		 proxy:"localhost:8888/Yawp_Build/Yawp_Build/"
+		 proxy:"localhost:8888/wordpress"
 	});
 
 	gulp.watch(".prod/css/*.css").on('change', browserSync.reload);
 	gulp.watch(".*.html").on('change', browserSync.reload);
 	});
 
-
 	// compile all your Sass
 		gulp.task('sass', function (){
-			gulp.src(['./dev/sass/*.scss', '!./dev/sass/base', '!./dev/sass/layout', '!./dev/sass/utils'])
+			gulp.src(['./dev/sass/*.scss', './dev/sass/base/', './dev/sass/layout/', './dev/sass/utils/'])
 				.pipe(sass({
-					includePaths: ['./dev/sass/layout', './dev/sass/base', './dev/sass/utils'],
+					includePaths: ['./dev/sass/layout/', './dev/sass/base/', './dev/sass/utils/'],
 					outputStyle: 'expanded'
 				}))
 				.pipe(prefix(
@@ -45,11 +52,30 @@
 				//.pipe(reload({stream: true}));
 		});
 
+
 	// Uglify JS
 		gulp.task('uglify', function(){
 			gulp.src('./dev/js/*.js')
 				.pipe(uglify())
 				.pipe(gulp.dest('./prod/js'));
+		});
+
+	// copy
+		gulp.task('copy', function() {
+    gulp.src('./prod/**',  {base: './'})
+        .pipe(copy())
+        .pipe(gulp.dest('../../wordpress/wp-content/themes/shop-one-column/'));
+		});
+
+		gulp.task('copycss', function() {
+    gulp.src('./prod/css/style.css')
+        .pipe(copy())
+        .pipe(gulp.dest('../../wordpress/wp-content/themes/shop-one-column/'));
+		});
+
+		gulp.task('cleancss', function () {
+    return gulp.src('../../wordpress/wp-content/themes/shop-one-column/style.css', {read: false})
+        .pipe(clean({force: true}));
 		});
 
 	// Images
@@ -67,9 +93,6 @@
 			.pipe(gulp.dest('./prod/img'));
 		});
 
-
-
-
 		// Defalt watch
 	gulp.task('default', ['serve'], function(){
 
@@ -85,6 +108,15 @@
 		gulp.watch("./dev/img/**/*", function(event){
 			gulp.run('imagemin');
 			gulp.run('svgmin');
+		});
+		// copy everything to wordpress
+		gulp.watch("./dev/**", function(event){
+			gulp.run('cleancss');
+		});
+		// copy everything to wordpress
+		gulp.watch("./dev/**", function(event){
+			gulp.run('copy');
+			gulp.run('copycss');
 		});
 
 	});
