@@ -1,87 +1,31 @@
-$( window ).on('load', function() {
-  var windowsize = $(window).width();
+setTimeout(function() {
+    function o() {
+        $(".home-page").scrollLeft(($(document).width() - e) / 2), $(document).scrollTop(($(document).height() - $(window).height()) / 2)
+    }
 
-  function centerload() {
-    if (windowsize < 992 && windowsize > 0) {
-      var winwidth = $( window ).width();
-      var docwidth = 1500;
-      var sizewidth = (docwidth - winwidth);
-      var haflfscrollleft = sizewidth / 2;
-      var winheight = $( window ).height();
-      var docheight = 1900;
-      var sizeheight = (docheight - winheight);
-      var haflfscrolltop = sizeheight / 2;
-      $('.home-page').scrollLeft( haflfscrollleft );
-      $('.home-page').scrollTop( haflfscrolltop );
+    function n() {
+        992 > e && e > 0 && o(), 1600 > e && e > 992 && o(), 2e3 > e && e > 1600 && o(), 8e3 > e && e > 2e3 && o()
     }
-    if (windowsize < 1600 && windowsize > 992) {
-      var winwidth = $( window ).width();
-      var docwidth = 1650;
-      var sizewidth = (docwidth - winwidth);
-      var haflfscrollleft = sizewidth / 2;
-      var winheight = $( window ).height();
-      var docheight = 1900;
-      var sizeheight = (docheight - winheight);
-      var haflfscrolltop = sizeheight / 2;
-      $('.home-page').scrollLeft( haflfscrollleft );
-      $('.home-page').scrollTop( haflfscrolltop );
-    }
-    if (windowsize < 2000 && windowsize > 1600) {
-      var winwidth = $( window ).width();
-      var docwidth = 2000;
-      var sizewidth = (docwidth - winwidth);
-      var haflfscrollleft = sizewidth / 2;
-      var winheight = $( window ).height();
-      var docheight = 1900;
-      var sizeheight = (docheight - winheight);
-      var haflfscrolltop = sizeheight / 2;
-      $('.home-page').scrollLeft( haflfscrollleft );
-      $('.home-page').scrollTop( haflfscrolltop );
-    }
-    if (windowsize < 8000 && windowsize > 2000) {
-      var winwidth = $( window ).width();
-      var docwidth = 1900;
-      var sizewidth = (docwidth - winwidth);
-      var haflfscrollleft = sizewidth / 2;
-      var winheight = $( window ).height();
-      var docheight = 2400;
-      var sizeheight = (docheight - winheight);
-      var haflfscrolltop = sizeheight / 2;
-      $('.home-page').scrollLeft( haflfscrollleft );
-      $('.home-page').scrollTop( haflfscrolltop );
-    }
-  }
-  centerload();
-
-  $('.producthover').hide();
-  $('.productcontainer').hide();
-
+    var e = $(window).width();
+    n()
+}, 1e3), $(".home-page .product").mouseenter(function() {
+    $(this).find(".producthover").addClass("producthover--show"), $(this).find(".productcontainer").addClass("productcontainer--show")
+}).mouseleave(function() {
+    $(this).find(".producthover").removeClass("producthover--show"), $(this).find(".productcontainer").removeClass("productcontainer--show")
+}), $(document).ready(function() {
+    var o = "http://localhost:8888/wordpress/",
+        n = function() {
+            return window.location.href === o ? !0 : void 0
+        };
+    !n() == !0 && (window.location.href = o)
 });
-
-function hoveroverprod() {
-  $('.product').mouseenter( function() {
-    $(this).find('.producthover').show('fast');
-    $(this).find('.productcontainer').show('fast');
-  });
-}
-
-function hoveroutprod() {
-  $('.product').mouseleave( function() {
-    $(this).find('.producthover').hide('fast');
-    $(this).find('.productcontainer').hide('fast');
-  });
-
-}
-
 var curYPos = 0,
-  curXPos = 0,
-  curDown = false;
-
-window.addEventListener('mousemove', function(e){
-  if(curDown === true){
-    window.scrollTo(document.body.scrollLeft + (curXPos - e.pageX), document.body.scrollTop + (curYPos - e.pageY));
-  }
+    curXPos = 0,
+    curDown = !1;
+window.addEventListener("mousemove", function(o) {
+    curDown === !0 && window.scrollTo(document.body.scrollLeft + (curXPos - o.pageX), document.body.scrollTop + (curYPos - o.pageY))
+}), window.addEventListener("mousedown", function(o) {
+    curDown = !0, curYPos = o.pageY, curXPos = o.pageX
+}), window.addEventListener("mouseup", function(o) {
+    curDown = !1
 });
-
-window.addEventListener('mousedown', function(e){ curDown = true; curYPos = e.pageY; curXPos = e.pageX; });
-window.addEventListener('mouseup', function(e){ curDown = false; });
