@@ -665,19 +665,36 @@ a:hover {
 .product {
   position: absolute;
   z-index: 100000;
+  overflow: hidden;
 }
 
 .productcontainer {
+  transition: 1.2s;
   position: relative;
   content: ' ';
+  width: 100%;
+  height: auto;
+  opacity: 0;
+}
+
+.productcontainer--show {
+  transition: 1.2s;
+  opacity: 1;
 }
 
 .producthover {
+  transition: 1.2s;
   position: absolute;
   background: url(/Yawp_Build/Yawp_Build/dev/img/png_jpg/bkghover.png);
   background-size: 100% 100%;
   width: 100%;
   height: 100%;
+  opacity: 0;
+}
+
+.producthover--show {
+  transition: 1.2s;
+  opacity: 1;
 }
 
 .productinfo {
@@ -709,7 +726,7 @@ a:hover {
   background: #bfbfbf;
   color: white;
   line-height: 33px;
-  width: 31%;
+  width: 150px;
   margin: auto;
 }
 
@@ -839,8 +856,12 @@ a:hover {
   left: 278px;
 }
 
+.product13 {
+  height: 400px;
+}
+
 .product13 .overlayfire:before {
-  left: 295px;
+  left: 228px;
 }
 
 .product14 .overlaywater:before {
@@ -1244,8 +1265,8 @@ a:hover {
 
 .product13 {
   transform: scale(0.5);
-  left: 183px;
-  top: 749px;
+  left: 263px;
+  top: 756px;
 }
 
 .product13 .productinfo {
@@ -1256,24 +1277,24 @@ a:hover {
 @media (min-width: 992px) {
   .product13 {
     transform: scale(0.5);
-    left: 234px;
-    top: 865px;
+    left: 313px;
+    top: 828px;
   }
 }
 
 @media (min-width: 1600px) {
   .product13 {
     transform: scale(0.6);
-    left: 349px;
-    top: 1065px;
+    left: 430px;
+    top: 1045px;
   }
 }
 
 @media (min-width: 2000px) {
   .product13 {
     transform: scale(0.7);
-    left: 572px;
-    top: 1435px;
+    left: 599px;
+    top: 1334px;
   }
 }
 

@@ -7,25 +7,25 @@ $(window).on("load", function() {
         return jQuery.ajax({
             url: prodURL,
             type: "POST",
-            async: !0,
+            async: 0,
             data: {},
             success: function(o) {
                 $(".pdpinfo").html(o), $(".woocommerce-Price-amount").appendTo(".in-stock"), $(".pdp-discription").append('<span class="menu-menu-closepdp">close</span>'), $("body").on("click", ".menu-menu-closepdp", function() {
                     $(".pdpinfo").delay(500).hide("slide", {
                         direction: "right"
-                    }, 400), $(".pdpinfo").empty(), window.location.href = "http://localhost:8888/wordpress/#"
+                    }, 400), $(".pdpinfo").empty(), window.location.href = "http://localhost:8888/wordpress/#12"
                 }), setTimeout(function() {
                     new Swiper(".swiper-container", {
-                        loop: !0,
+                        loop: 0,
                         nextButton: ".swiper-button-next",
                         prevButton: ".swiper-button-prev",
                         pagination: ".swiper-pagination",
-                        paginationClickable: !0,
+                        paginationClickable: 0,
                         effect: "cube",
-                        grabCursor: !0,
+                        grabCursor: 0,
                         cube: {
-                            shadow: !0,
-                            slideShadows: !0,
+                            shadow: 0,
+                            slideShadows: 0,
                             shadowOffset: 20,
                             shadowScale: .94
                         }

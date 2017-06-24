@@ -8,11 +8,15 @@ setTimeout(function() {
     }
     var e = $(window).width();
     n()
-}, 1e3), $(".home-page .product").mouseenter(function() {
+}, 1e3)
+
+$(".home-page .product").mouseenter(function() {
     $(this).find(".producthover").addClass("producthover--show"), $(this).find(".productcontainer").addClass("productcontainer--show")
 }).mouseleave(function() {
     $(this).find(".producthover").removeClass("producthover--show"), $(this).find(".productcontainer").removeClass("productcontainer--show")
-}), $(document).ready(function() {
+})
+
+$(document).ready(function() {
     var o = "http://localhost:8888/wordpress/",
         n = function() {
             return window.location.href === o ? !0 : void 0
