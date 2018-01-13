@@ -1,13 +1,53 @@
+.loader {
+  height: 100vh;
+  width: 100vw;
+  background: white;
+  z-index: 200000;
+  position: fixed;
+  &:after {
+    content: ' ';
+    background: url(/wordpress/wp-content/themes/shop-one-column/prod/img/svg/logo.svg);
+    background-size: 140px 82px;
+    width: 140px;
+    height: 82px;
+    position: absolute;
+    top: calc(50% - 41px);
+    left: calc(50% - 70px);
+  }
+}
+
+
+&:focus {
+  outline: none;
+}
+
 a {
-    color: #000;
-    &:hover {
-      color: #797979
-    }
+  color: #000;
+  &:hover {
+    color: #797979
+  }
+}
+
+body {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  &:focus {
+    outline: none;
+  }
 }
 
 .home-page {
   overflow: auto;
   cursor: grab;
+  .home-page-inner {
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  &::-webkit-scrollbar {
+    display: none;
+  }
   &:active {
     cursor: -webkit-grabbing;
   }
@@ -36,7 +76,7 @@ a {
 .producthover {
   transition: 1.2s;
   position: absolute;
-  background: url(/Yawp_Build/Yawp_Build/dev/img/png_jpg/bkghover.png);
+  background: url(/wordpress/wp-content/themes/shop-one-column/prod/img/png_jpg/bkghover.png);
   background-size: 100% 100%;
   width: 100%;
   height: 100%;
@@ -50,7 +90,6 @@ a {
 
 .productinfo {
   position: absolute;
-  //left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
@@ -74,8 +113,9 @@ a {
     background: #bfbfbf;
     color: white;
     line-height: 33px;
-    width: 150px;
+    width: 170px;
     margin: auto;
+    padding: 0 10px;
   }
   .productbuttons {
     z-index: 500;
@@ -91,13 +131,14 @@ a {
     border: 1px solid #797979;
     text-align: center;
     display: inline-block;
-    font-size: 26px;
+    font-size: 20px;
     padding: 0 20px;
-    line-height: 40px;
+    line-height: 38px;
     background-color: white;
     height: 40px;
     margin: 0 -2px;
     transition: 0.5s;
+    text-transform: uppercase;
     &:hover {
       background-color: #dcdcdc;
       transition: 0.5s;
@@ -151,7 +192,7 @@ a {
     left: 250px;
     top: -20px;
     content: ' ';
-    background: url(/Yawp_Build/Yawp_Build/dev/img/svg/wind.svg);
+    background: url(/wordpress/wp-content/themes/shop-one-column/prod/img/svg/wind.svg);
     background-size: 32px 32px;
     width: 32px;
     height: 32px;
@@ -166,7 +207,7 @@ a {
     left: 250px;
     top: -20px;
     content: ' ';
-    background: url(/Yawp_Build/Yawp_Build/dev/img/svg/fire.svg);
+    background: url(/wordpress/wp-content/themes/shop-one-column/prod/img/svg/fire.svg);
     background-size: 32px 32px;
     width: 32px;
     height: 32px;
@@ -181,7 +222,7 @@ a {
     left: 250px;
     top: -20px;
     content: ' ';
-    background: url(/Yawp_Build/Yawp_Build/dev/img/svg/leaf.svg);
+    background: url(/wordpress/wp-content/themes/shop-one-column/prod/img/svg/leaf.svg);
     background-size: 32px 32px;
     width: 32px;
     height: 32px;
@@ -196,7 +237,7 @@ a {
     left: 250px;
     top: -20px;
     content: ' ';
-    background: url(/Yawp_Build/Yawp_Build/dev/img/svg/water.svg);
+    background: url(/wordpress/wp-content/themes/shop-one-column/prod/img/svg/water.svg);
     background-size: 32px 32px;
     width: 32px;
     height: 32px;
@@ -223,7 +264,7 @@ a {
   height: 400px;
   .overlayfire {
     &:before {
-      left: 228px;
+      left: 265px;
     }
   }
 }
@@ -627,8 +668,8 @@ a {
 
 .product13{
   transform: scale(.5);
-  left: 263px;
-  top: 756px;
+  left: 223px;
+  top: 735px;
   .productinfo {
     margin-top: 14%;
     left: 0px;
@@ -638,24 +679,24 @@ a {
 @media (min-width: 992px) {
   .product13{
     transform: scale(.5);
-    left: 313px;
-    top: 828px;
+    left: 273px;
+    top: 808px;
   }
 }
 
 @media (min-width: 1600px) {
   .product13{
     transform: scale(0.6);
-    left: 430px;
-    top: 1045px;
+    left: 390px;
+    top: 1022px;
   }
 }
 
 @media (min-width: 2000px) {
   .product13{
     transform: scale(0.7);
-    left: 599px;
-    top: 1334px;
+    left: 558px;
+    top: 1308px;
   }
 }
 
@@ -752,12 +793,21 @@ a {
   display: none;
 }
 
-.home-page__clouds {
-  width: 100%;
-  overflow-x: hidden;
-  height: 550px;
-  display: flex;
+.home--clouds {
   position: absolute;
+  width: 100%;
+  overflow: hidden;
+  height: 550px;
+  .home-page__clouds {
+    width: 100%;
+    height: 550px;
+    display: flex;
+    position: absolute;
+    div {
+      pointer-events: none;
+      cursor: grab;
+    }
+  }
 }
 
 #background-wrap {

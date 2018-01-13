@@ -11,9 +11,10 @@ $(window).on("load", function() {
             data: {},
             success: function(o) {
                 $(".pdpinfo").html(o), $(".woocommerce-Price-amount").appendTo(".in-stock"), $(".pdp-discription").append('<span class="menu-menu-closepdp">close</span>'), $("body").on("click", ".menu-menu-closepdp", function() {
+                  $(".pdpinfo").delay(1000).removeClass('pdpinfo--open');
                     $(".pdpinfo").delay(500).hide("slide", {
                         direction: "right"
-                    }, 400), $(".pdpinfo").empty(), window.location.href = "http://localhost:8888/wordpress/#12"
+                    }, 400), setTimeout (function() {$(".pdpinfo").empty()}, 1000), window.location.href = "http://localhost:8888/wordpress/#12"
                 }), setTimeout(function() {
                     new Swiper(".swiper-container", {
                         loop: 0,
@@ -30,9 +31,11 @@ $(window).on("load", function() {
                             shadowScale: .94
                         }
                     })
-                }, 1e3)
+                }, 2000)
             }
-        }), $(".pdpinfo").delay(500).show("slide", {
+        }), setTimeout(function() {
+            $(".pdpinfo").addClass('pdpinfo--open');
+        }, 2000), $(".pdpinfo").delay(500).show("slide", {
             direction: "right"
         }, 400), !1
     })

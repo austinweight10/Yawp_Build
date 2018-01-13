@@ -6,7 +6,7 @@
 	z-index: 400;
 	&:after {
 		content: ' ';
-		background: url(/Yawp_Build/Yawp_Build/dev/img/svg/logo.svg);
+		background: url(/wordpress/wp-content/themes/shop-one-column/prod/img/svg/logo.svg);
 		background-size: 140px 82px;
 		display: block;
 		text-indent: -9999px;
@@ -20,7 +20,8 @@
 
 @media (min-width: 992px) {
 	.menu-logo {
-		background: url(/Yawp_Build/Yawp_Build/dev/img/png_jpg/curve.gif);
+		// background: url(/wordpress/wp-content/themes/shop-one-column/prod/img/png_jpg/test.svg);
+		box-shadow: 2px 2px 4px #cacaca;
 		background-size: 320px 300px;
 		display: block;
 		text-indent: -9999px;
@@ -32,7 +33,7 @@
 		z-index: 400;
 		&:after {
 			content: ' ';
-			background: url(/Yawp_Build/Yawp_Build/dev/img/svg/logo.svg);
+			background: url(/wordpress/wp-content/themes/shop-one-column/prod/img/svg/logo.svg);
 			background-size: 140px 82px;
 			display: block;
 			text-indent: -9999px;
@@ -115,12 +116,24 @@
 				text-transform: lowercase;;
 				color: #797979;
 				font-weight: 300;
-				border-bottom: 1px solid #797979;
+				// border-bottom: 1px solid #797979;
 				display: inline;
 				-webkit-transition-duration: 0.5s;
 				transition-duration: 0.5s;
 				transition-delay: 0.5s;
 				cursor: pointer;
+				color: transparent;
+				&:after {
+					position: absolute;
+			    content: '+';
+			    right: 8px;
+			    top: -1px;
+			    transform: rotate(45deg) scale(3);
+					color: #797979;
+					-webkit-transition-duration: 0.4s;
+          transition-duration: .4s;
+          transition-delay: 0.8s;
+				}
 			}
 			h2 {
 				font-size: 22px;
@@ -148,10 +161,13 @@
 				padding-bottom: 20px;
 				width: 90%;
 			}
+			.sml_submitbtn {
+				margin-bottom: 10px;
+			}
 			.menu-ember-icon {
 				&:after {
 					content: ' ';
-					background: url(/Yawp_Build/Yawp_Build/dev/img/svg/fire.svg);
+					background: url(/wordpress/wp-content/themes/shop-one-column/prod/img/svg/fire.svg);
 					background-size: 32px 32px;
 					display: block;
 				  text-indent: -9999px;
@@ -166,7 +182,7 @@
 			.menu-origin-icon {
 				&:after {
 					content: ' ';
-					background: url(/Yawp_Build/Yawp_Build/dev/img/svg/leaf.svg);
+					background: url(/wordpress/wp-content/themes/shop-one-column/prod/img/svg/leaf.svg);
 					background-size: 32px 32px;
 					display: block;
 				  text-indent: -9999px;
@@ -181,7 +197,7 @@
 			.menu-elixer-icon {
 				&:after {
 					content: ' ';
-					background: url(/Yawp_Build/Yawp_Build/dev/img/svg/water.svg);
+					background: url(/wordpress/wp-content/themes/shop-one-column/prod/img/svg/water.svg);
 					background-size: 32px 32px;
 					display: block;
 				  text-indent: -9999px;
@@ -196,7 +212,7 @@
 			.menu-soar-icon {
 				&:after {
 					content: ' ';
-					background: url(/Yawp_Build/Yawp_Build/dev/img/svg/wind.svg);
+					background: url(/wordpress/wp-content/themes/shop-one-column/prod/img/svg/wind.svg);
 					background-size: 32px 32px;
 					display: block;
 				  text-indent: -9999px;
@@ -339,7 +355,12 @@
 				transition-duration: .0s;
 				transition-delay: .0s;
 			}
-			.menu-closing {
+			.menu-menu-close {
+				&:after {
+			    transform: rotate(0deg) scale(1);
+				}
+			}
+			.menu-closing-main {
 				position: absolute;
 				right: 0px;
 		    top: -12px;
@@ -354,7 +375,7 @@
 				cursor: pointer;
 				&:after {
 					content: ' ';
-					background: url(/Yawp_Build/Yawp_Build/dev/img/svg/menu.svg);
+					background: url(/wordpress/wp-content/themes/shop-one-column/prod/img/svg/menu.svg);
 					background-size: 30px 30px;
 					width: 30px;
 					height: 30px;
@@ -376,7 +397,7 @@
 				transition-delay: .0s;
 				&:after {
 					content: ' ';
-					background: url(/Yawp_Build/Yawp_Build/dev/img/svg/fire.svg);
+					background: url(/wordpress/wp-content/themes/shop-one-column/prod/img/svg/fire.svg);
 					background-size: 32px 32px;
 					display: block;
 				  text-indent: -9999px;
@@ -389,7 +410,7 @@
 				transition-delay: .0s;
 				&:after {
 					content: ' ';
-					background: url(/Yawp_Build/Yawp_Build/dev/img/svg/leaf.svg);
+					background: url(/wordpress/wp-content/themes/shop-one-column/prod/img/svg/leaf.svg);
 					background-size: 32px 32px;
 					display: block;
 				  text-indent: -9999px;
@@ -402,7 +423,7 @@
 				transition-delay: .0s;
 				&:after {
 					content: ' ';
-					background: url(/Yawp_Build/Yawp_Build/dev/img/svg/water.svg);
+					background: url(/wordpress/wp-content/themes/shop-one-column/prod/img/svg/water.svg);
 					background-size: 32px 32px;
 					display: block;
 				  text-indent: -9999px;
@@ -415,7 +436,7 @@
 				transition-delay: .0s;
 				&:after {
 					content: ' ';
-					background: url(/Yawp_Build/Yawp_Build/dev/img/svg/wind.svg);
+					background: url(/wordpress/wp-content/themes/shop-one-column/prod/img/svg/wind.svg);
 					background-size: 32px 32px;
 					display: block;
 				  text-indent: -9999px;
@@ -489,7 +510,7 @@
 			.menu-logo-inner {
 				&:after {
 					content: ' ';
-					background: url(/Yawp_Build/Yawp_Build/dev/img/svg/logo.svg);
+					background: url(/wordpress/wp-content/themes/shop-one-column/prod/img/svg/logo.svg);
 					background-size: 140px 82px;
 					display: block;
 					text-indent: -9999px;

@@ -93,7 +93,6 @@
   text-transform: lowercase;
   color: #797979;
   font-weight: 300;
-  border-bottom: 1px solid #797979;
   cursor: pointer;
   position: relative;
   top: 11px;
@@ -102,6 +101,19 @@
   right: 0px;
   width: 37px;
   float: right;
+  cursor: pointer;
+  color: transparent;
+  &:after {
+    position: absolute;
+    content: '+';
+    right: 8px;
+    top: -1px;
+    transform: rotate(45deg) scale(3);
+    color: #797979;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: .4s;
+    transition-delay: 0.8s;
+  }
 }
 
 .woocommerce-shipping-fields {

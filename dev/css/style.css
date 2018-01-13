@@ -61,7 +61,7 @@ button {
 
 .menu-logo:after {
   content: ' ';
-  background: url(/Yawp_Build/Yawp_Build/dev/img/svg/logo.svg);
+  background: url(/wordpress/wp-content/themes/shop-one-column/prod/img/svg/logo.svg);
   background-size: 140px 82px;
   display: block;
   text-indent: -9999px;
@@ -74,7 +74,7 @@ button {
 
 @media (min-width: 992px) {
   .menu-logo {
-    background: url(/Yawp_Build/Yawp_Build/dev/img/png_jpg/curve.gif);
+    box-shadow: 2px 2px 4px #cacaca;
     background-size: 320px 300px;
     display: block;
     text-indent: -9999px;
@@ -87,7 +87,7 @@ button {
   }
   .menu-logo:after {
     content: ' ';
-    background: url(/Yawp_Build/Yawp_Build/dev/img/svg/logo.svg);
+    background: url(/wordpress/wp-content/themes/shop-one-column/prod/img/svg/logo.svg);
     background-size: 140px 82px;
     display: block;
     text-indent: -9999px;
@@ -179,11 +179,22 @@ button {
   text-transform: lowercase;
   color: #797979;
   font-weight: 300;
-  border-bottom: 1px solid #797979;
   display: inline;
   transition-duration: 0.5s;
   transition-delay: 0.5s;
   cursor: pointer;
+  color: transparent;
+}
+
+.menu.menu-open .menu-content .menu-menu-close:after {
+  position: absolute;
+  content: '+';
+  right: 8px;
+  top: -1px;
+  transform: rotate(45deg) scale(3);
+  color: #797979;
+  transition-duration: .4s;
+  transition-delay: 0.8s;
 }
 
 .menu.menu-open .menu-content h2 {
@@ -217,9 +228,13 @@ button {
   width: 90%;
 }
 
+.menu.menu-open .menu-content .sml_submitbtn {
+  margin-bottom: 10px;
+}
+
 .menu.menu-open .menu-content .menu-ember-icon:after {
   content: ' ';
-  background: url(/Yawp_Build/Yawp_Build/dev/img/svg/fire.svg);
+  background: url(/wordpress/wp-content/themes/shop-one-column/prod/img/svg/fire.svg);
   background-size: 32px 32px;
   display: block;
   text-indent: -9999px;
@@ -233,7 +248,7 @@ button {
 
 .menu.menu-open .menu-content .menu-origin-icon:after {
   content: ' ';
-  background: url(/Yawp_Build/Yawp_Build/dev/img/svg/leaf.svg);
+  background: url(/wordpress/wp-content/themes/shop-one-column/prod/img/svg/leaf.svg);
   background-size: 32px 32px;
   display: block;
   text-indent: -9999px;
@@ -247,7 +262,7 @@ button {
 
 .menu.menu-open .menu-content .menu-elixer-icon:after {
   content: ' ';
-  background: url(/Yawp_Build/Yawp_Build/dev/img/svg/water.svg);
+  background: url(/wordpress/wp-content/themes/shop-one-column/prod/img/svg/water.svg);
   background-size: 32px 32px;
   display: block;
   text-indent: -9999px;
@@ -261,7 +276,7 @@ button {
 
 .menu.menu-open .menu-content .menu-soar-icon:after {
   content: ' ';
-  background: url(/Yawp_Build/Yawp_Build/dev/img/svg/wind.svg);
+  background: url(/wordpress/wp-content/themes/shop-one-column/prod/img/svg/wind.svg);
   background-size: 32px 32px;
   display: block;
   text-indent: -9999px;
@@ -426,7 +441,11 @@ button {
   transition-delay: .0s;
 }
 
-.menu.menu-close .menu-content .menu-closing {
+.menu.menu-close .menu-content .menu-menu-close:after {
+  transform: rotate(0deg) scale(1);
+}
+
+.menu.menu-close .menu-content .menu-closing-main {
   position: absolute;
   right: 0px;
   top: -12px;
@@ -441,9 +460,9 @@ button {
   cursor: pointer;
 }
 
-.menu.menu-close .menu-content .menu-closing:after {
+.menu.menu-close .menu-content .menu-closing-main:after {
   content: ' ';
-  background: url(/Yawp_Build/Yawp_Build/dev/img/svg/menu.svg);
+  background: url(/wordpress/wp-content/themes/shop-one-column/prod/img/svg/menu.svg);
   background-size: 30px 30px;
   width: 30px;
   height: 30px;
@@ -469,7 +488,7 @@ button {
 
 .menu.menu-close .menu-content .menu-ember:after {
   content: ' ';
-  background: url(/Yawp_Build/Yawp_Build/dev/img/svg/fire.svg);
+  background: url(/wordpress/wp-content/themes/shop-one-column/prod/img/svg/fire.svg);
   background-size: 32px 32px;
   display: block;
   text-indent: -9999px;
@@ -484,7 +503,7 @@ button {
 
 .menu.menu-close .menu-content .menu-origin:after {
   content: ' ';
-  background: url(/Yawp_Build/Yawp_Build/dev/img/svg/leaf.svg);
+  background: url(/wordpress/wp-content/themes/shop-one-column/prod/img/svg/leaf.svg);
   background-size: 32px 32px;
   display: block;
   text-indent: -9999px;
@@ -499,7 +518,7 @@ button {
 
 .menu.menu-close .menu-content .menu-elixer:after {
   content: ' ';
-  background: url(/Yawp_Build/Yawp_Build/dev/img/svg/water.svg);
+  background: url(/wordpress/wp-content/themes/shop-one-column/prod/img/svg/water.svg);
   background-size: 32px 32px;
   display: block;
   text-indent: -9999px;
@@ -514,7 +533,7 @@ button {
 
 .menu.menu-close .menu-content .menu-soar:after {
   content: ' ';
-  background: url(/Yawp_Build/Yawp_Build/dev/img/svg/wind.svg);
+  background: url(/wordpress/wp-content/themes/shop-one-column/prod/img/svg/wind.svg);
   background-size: 32px 32px;
   display: block;
   text-indent: -9999px;
@@ -591,7 +610,7 @@ button {
   }
   .menu.menu-open .menu-logo-inner:after {
     content: ' ';
-    background: url(/Yawp_Build/Yawp_Build/dev/img/svg/logo.svg);
+    background: url(/wordpress/wp-content/themes/shop-one-column/prod/img/svg/logo.svg);
     background-size: 140px 82px;
     display: block;
     text-indent: -9999px;
@@ -644,6 +663,29 @@ button {
   }
 }
 
+.loader {
+  height: 100vh;
+  width: 100vw;
+  background: white;
+  z-index: 200000;
+  position: fixed;
+}
+
+.loader:after {
+  content: ' ';
+  background: url(/wordpress/wp-content/themes/shop-one-column/prod/img/svg/logo.svg);
+  background-size: 140px 82px;
+  width: 140px;
+  height: 82px;
+  position: absolute;
+  top: calc(50% - 41px);
+  left: calc(50% - 70px);
+}
+
+:focus {
+  outline: none;
+}
+
 a {
   color: #000;
 }
@@ -652,10 +694,26 @@ a:hover {
   color: #797979;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body:focus {
+  outline: none;
+}
+
 .home-page {
   overflow: auto;
   cursor: -webkit-grab;
   cursor: grab;
+}
+
+.home-page .home-page-inner::-webkit-scrollbar {
+  display: none;
+}
+
+.home-page::-webkit-scrollbar {
+  display: none;
 }
 
 .home-page:active {
@@ -685,7 +743,7 @@ a:hover {
 .producthover {
   transition: 1.2s;
   position: absolute;
-  background: url(/Yawp_Build/Yawp_Build/dev/img/png_jpg/bkghover.png);
+  background: url(/wordpress/wp-content/themes/shop-one-column/prod/img/png_jpg/bkghover.png);
   background-size: 100% 100%;
   width: 100%;
   height: 100%;
@@ -726,8 +784,9 @@ a:hover {
   background: #bfbfbf;
   color: white;
   line-height: 33px;
-  width: 150px;
+  width: 170px;
   margin: auto;
+  padding: 0 10px;
 }
 
 .productinfo .productbuttons {
@@ -745,13 +804,14 @@ a:hover {
   border: 1px solid #797979;
   text-align: center;
   display: inline-block;
-  font-size: 26px;
+  font-size: 20px;
   padding: 0 20px;
-  line-height: 40px;
+  line-height: 38px;
   background-color: white;
   height: 40px;
   margin: 0 -2px;
   transition: 0.5s;
+  text-transform: uppercase;
 }
 
 .productinfo a:hover {
@@ -803,7 +863,7 @@ a:hover {
   left: 250px;
   top: -20px;
   content: ' ';
-  background: url(/Yawp_Build/Yawp_Build/dev/img/svg/wind.svg);
+  background: url(/wordpress/wp-content/themes/shop-one-column/prod/img/svg/wind.svg);
   background-size: 32px 32px;
   width: 32px;
   height: 32px;
@@ -816,7 +876,7 @@ a:hover {
   left: 250px;
   top: -20px;
   content: ' ';
-  background: url(/Yawp_Build/Yawp_Build/dev/img/svg/fire.svg);
+  background: url(/wordpress/wp-content/themes/shop-one-column/prod/img/svg/fire.svg);
   background-size: 32px 32px;
   width: 32px;
   height: 32px;
@@ -829,7 +889,7 @@ a:hover {
   left: 250px;
   top: -20px;
   content: ' ';
-  background: url(/Yawp_Build/Yawp_Build/dev/img/svg/leaf.svg);
+  background: url(/wordpress/wp-content/themes/shop-one-column/prod/img/svg/leaf.svg);
   background-size: 32px 32px;
   width: 32px;
   height: 32px;
@@ -842,7 +902,7 @@ a:hover {
   left: 250px;
   top: -20px;
   content: ' ';
-  background: url(/Yawp_Build/Yawp_Build/dev/img/svg/water.svg);
+  background: url(/wordpress/wp-content/themes/shop-one-column/prod/img/svg/water.svg);
   background-size: 32px 32px;
   width: 32px;
   height: 32px;
@@ -861,7 +921,7 @@ a:hover {
 }
 
 .product13 .overlayfire:before {
-  left: 228px;
+  left: 265px;
 }
 
 .product14 .overlaywater:before {
@@ -1265,8 +1325,8 @@ a:hover {
 
 .product13 {
   transform: scale(0.5);
-  left: 263px;
-  top: 756px;
+  left: 223px;
+  top: 735px;
 }
 
 .product13 .productinfo {
@@ -1277,24 +1337,24 @@ a:hover {
 @media (min-width: 992px) {
   .product13 {
     transform: scale(0.5);
-    left: 313px;
-    top: 828px;
+    left: 273px;
+    top: 808px;
   }
 }
 
 @media (min-width: 1600px) {
   .product13 {
     transform: scale(0.6);
-    left: 430px;
-    top: 1045px;
+    left: 390px;
+    top: 1022px;
   }
 }
 
 @media (min-width: 2000px) {
   .product13 {
     transform: scale(0.7);
-    left: 599px;
-    top: 1334px;
+    left: 558px;
+    top: 1308px;
   }
 }
 
@@ -1387,12 +1447,24 @@ a:hover {
   display: none;
 }
 
-.home-page__clouds {
+.home--clouds {
+  position: absolute;
   width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
+  height: 550px;
+}
+
+.home--clouds .home-page__clouds {
+  width: 100%;
   height: 550px;
   display: flex;
   position: absolute;
+}
+
+.home--clouds .home-page__clouds div {
+  pointer-events: none;
+  cursor: -webkit-grab;
+  cursor: grab;
 }
 
 #background-wrap {
@@ -1492,13 +1564,14 @@ a:hover {
   top: 10px;
   position: fixed;
   content: ' ';
-  background: url(/Yawp_Build/Yawp_Build/dev/img/svg/cart.svg);
+  background: url(/wordpress/wp-content/themes/shop-one-column/prod/img/svg/cart.svg);
   background-size: 45px 45px;
   display: block;
   text-indent: -9999px;
   width: 45px;
   height: 45px;
   z-index: 20000;
+  cursor: pointer;
 }
 
 .cart-menu-items {
@@ -1508,6 +1581,7 @@ a:hover {
   font-size: 19px;
   z-index: 20000;
   font-family: 'Quicksand', sans-serif;
+  cursor: pointer;
 }
 
 .cart-menu {
@@ -1528,6 +1602,7 @@ a:hover {
   font-family: 'Quicksand', sans-serif;
   font-size: 16px;
   color: #797979;
+  opacity: 0;
 }
 
 .cart-menu .menu-content-cart {
@@ -1546,6 +1621,7 @@ a:hover {
   padding: 0 90% 40px 0;
   transition-duration: .4s;
   transition-delay: .4s;
+  opacity: 0;
 }
 
 .cart-menu .menu-content-cart .menu-menu-close-cart {
@@ -1557,11 +1633,21 @@ a:hover {
   text-transform: lowercase;
   color: #797979;
   font-weight: 300;
-  border-bottom: 1px solid #797979;
   display: inline;
   transition-duration: 0.5s;
   transition-delay: 0.5s;
   cursor: pointer;
+  color: transparent;
+}
+
+.cart-menu .menu-content-cart .menu-menu-close-cart:after {
+  position: absolute;
+  content: '+';
+  right: 8px;
+  top: -1px;
+  transform: rotate(45deg) scale(3);
+  color: #797979;
+  opacity: 0;
 }
 
 .cart-menu .menu-content-cart h2 {
@@ -1623,6 +1709,7 @@ a:hover {
 
 .cart-menu .menu-content-cart .checkout-button {
   margin: 50px 0;
+  opacity: 0;
 }
 
 .cart-menu .menu-content-cart .checkout-button a {
@@ -1651,6 +1738,36 @@ a:hover {
   margin-bottom: 10px;
   position: relative;
   display: block;
+}
+
+.cart-menu.cart-menu--open .menu-content-cart .menu-menu-cart {
+  opacity: 1;
+  transition-duration: .4s;
+  transition-delay: .4s;
+}
+
+.cart-menu.cart-menu--open .menu-content-cart .menu-menu-close-cart:after {
+  transition-duration: .4s;
+  transition-delay: .4s;
+  position: absolute;
+  content: '+';
+  right: 8px;
+  top: -1px;
+  transform: rotate(45deg) scale(3);
+  color: #797979;
+  opacity: 1;
+}
+
+.cart-menu.cart-menu--open .cart-contents {
+  opacity: 1;
+  transition-duration: .4s;
+  transition-delay: .8s;
+}
+
+.cart-menu.cart-menu--open .checkout-button {
+  opacity: 1;
+  transition-duration: .4s;
+  transition-delay: 1.2s;
 }
 
 .type-product {
@@ -1688,6 +1805,10 @@ a:hover {
   display: none;
 }
 
+.type-product .swiper-wrapper {
+  height: calc(100% - 20px);
+}
+
 .type-product .entry-summary {
   float: right;
   width: 100%;
@@ -1714,9 +1835,13 @@ a:hover {
 }
 
 .type-product .swiper-pagination {
-  margin-top: -50px;
+  margin-top: -20px;
   position: relative;
   display: block;
+}
+
+.type-product .swiper-slide {
+  overflow: hidden;
 }
 
 .type-product .woocommerce-tabs {
@@ -1727,13 +1852,18 @@ a:hover {
 }
 
 .type-product .woocommerce-tabs img {
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .type-product .pdp-discription {
   font-family: 'Quicksand', sans-serif;
   color: #797979;
+  opacity: 0;
+  transition-delay: 2s;
 }
 
 .type-product h3 {
@@ -1741,6 +1871,8 @@ a:hover {
   color: #797979;
   font-size: 22px;
   margin: 35px 0 8px 0;
+  opacity: 0;
+  transition-delay: 2s;
 }
 
 .type-product .menu-menu-closepdp {
@@ -1749,7 +1881,6 @@ a:hover {
   text-transform: lowercase;
   color: #797979;
   font-weight: 300;
-  border-bottom: 1px solid #797979;
   cursor: pointer;
   position: relative;
   top: 11px;
@@ -1758,6 +1889,20 @@ a:hover {
   right: 0px;
   width: 37px;
   float: right;
+  color: transparent;
+  opacity: 0;
+  transition-delay: 2s;
+}
+
+.type-product .menu-menu-closepdp:after {
+  position: absolute;
+  content: '+';
+  right: 8px;
+  top: -1px;
+  transform: rotate(45deg) scale(3);
+  color: #797979;
+  transition-duration: .4s;
+  transition-delay: 0.8s;
 }
 
 .type-product p {
@@ -1766,17 +1911,21 @@ a:hover {
   padding: 10px 0;
   line-height: 19px;
   color: #797979;
+  opacity: 0;
+  transition-delay: 2s;
 }
 
 .type-product .in-stock {
   font-family: 'Quicksand', sans-serif;
   font-size: 16px;
   color: #797979;
+  opacity: 0;
+  transition-delay: 2s;
 }
 
 .type-product .single_add_to_cart_button {
   font-family: 'Quicksand', sans-serif;
-  font-size: 25px;
+  font-size: 18px;
   text-align: center;
   margin: auto;
   background: white;
@@ -1791,6 +1940,7 @@ a:hover {
   display: block;
   position: relative;
   transition: 0.5s;
+  text-transform: uppercase;
 }
 
 .type-product .single_add_to_cart_button:hover {
@@ -1801,6 +1951,7 @@ a:hover {
 .type-product .swiper-container {
   background: #edf2f5;
   margin: 10px;
+  height: 100%;
 }
 
 .type-product .panel {
@@ -1808,6 +1959,12 @@ a:hover {
   margin-bottom: 0px;
   box-shadow: none;
   -webkit-box-shadow: none;
+  height: 100%;
+}
+
+.type-product .quantity {
+  opacity: 0;
+  transition-delay: 2s;
 }
 
 .type-product .quantity input {
@@ -1826,11 +1983,15 @@ a:hover {
 }
 
 .type-product .swiper-button-next {
-  background: url(/Yawp_Build/Yawp_Build/dev/img/svg/arrow-right.svg);
+  width: 15px;
+  height: 24px;
+  background: url(/wordpress/wp-content/themes/shop-one-column/prod/img/svg/arrow-right.svg);
 }
 
 .type-product .swiper-button-prev {
-  background: url(/Yawp_Build/Yawp_Build/dev/img/svg/arrow-left.svg);
+  width: 15px;
+  height: 24px;
+  background: url(/wordpress/wp-content/themes/shop-one-column/prod/img/svg/arrow-left.svg);
 }
 
 .type-product .woocommerce-Price-amount {
@@ -1860,14 +2021,56 @@ a:hover {
   z-index: 4;
   background: #edf2f5;
   height: auto;
-  overflow-y: scroll;
   direction: rtl;
   max-height: 80vh;
 }
 
+.pdpinfo.pdpinfo--open .pdp-discription {
+  opacity: 1;
+  transition-duration: .4s;
+  transition-delay: 0s;
+}
+
+.pdpinfo.pdpinfo--open .menu-menu-closepdp {
+  opacity: 1;
+  transition-duration: .4s;
+  transition-delay: .2s;
+}
+
+.pdpinfo.pdpinfo--open h3 {
+  opacity: 1;
+  transition-duration: .4s;
+  transition-delay: 0.4s;
+}
+
+.pdpinfo.pdpinfo--open p {
+  opacity: 1;
+  transition-duration: .4s;
+  transition-delay: 0.6s;
+}
+
+.pdpinfo.pdpinfo--open .stock.in-stock {
+  opacity: 1;
+  transition-duration: .4s;
+  transition-delay: 0.8s;
+}
+
+.pdpinfo.pdpinfo--open .quantity {
+  opacity: 1;
+  transition-duration: .4s;
+  transition-delay: 1s;
+}
+
+.pdpinfo.pdpinfo--open .single_add_to_cart_button {
+  opacity: 1;
+  transition-duration: .4s;
+  transition-delay: 1.2s;
+}
+
 @media (min-width: 1170px) {
   .type-product {
-    display: block;
+    display: flex;
+    flex-direction: row;
   }
   .type-product .single_add_to_cart_button {
     width: calc(100% - 5px);
@@ -1997,7 +2200,6 @@ hr {
   text-transform: lowercase;
   color: #797979;
   font-weight: 300;
-  border-bottom: 1px solid #797979;
   cursor: pointer;
   position: relative;
   top: 11px;
@@ -2006,6 +2208,19 @@ hr {
   right: 0px;
   width: 37px;
   float: right;
+  cursor: pointer;
+  color: transparent;
+}
+
+.menu-menu-closecheckout:after {
+  position: absolute;
+  content: '+';
+  right: 8px;
+  top: -1px;
+  transform: rotate(45deg) scale(3);
+  color: #797979;
+  transition-duration: .4s;
+  transition-delay: 0.8s;
 }
 
 .woocommerce-shipping-fields {

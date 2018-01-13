@@ -3,28 +3,28 @@ $( window ).on('load', function() {
 
   function accrdiangrowsize() {
     if (windowsize < 992) {
-      $('.menu-menu-close').on("click", function() {
+      $('.menu-closing-main').on("click", function() {
         if ($('.menu').hasClass('menu-close')) {
           $('.menu').animate({'width': wthSelected});
-          $('.menu-closing').addClass('menu-menu-close');
+          $('.menu-closing-main').addClass('menu-menu-close');
         } else {
           $('.menu').animate({'width':'45'});
-          $('.menu-closing').removeClass('menu-menu-close');
+          $('.menu-closing-main').removeClass('menu-menu-close');
         }
         $('.menu').toggleClass('menu-close');
         $('.menu').toggleClass('overflow');
         removeaccordian();
       })
     } else {
-      $('.menu-menu-close').on("click", function() {
+      $('.menu-closing-main').on("click", function() {
         if ($('.menu').hasClass('menu-close')) {
           $('.menu').animate({'width': wthSelected});
-          $('.menu-closing').addClass('menu-menu-close');
+          $('.menu-closing-main').addClass('menu-menu-close');
           $('.menu-logo').css('z-index', '0');
           $('.menu-logo').hide(200);
         } else {
           $('.menu').animate({'width':'45'});
-          $('.menu-closing').removeClass('menu-menu-close');
+          $('.menu-closing-main').removeClass('menu-menu-close');
           $('.menu-logo').delay( 200 ).queue(function (next) {
             $('.menu-logo').css('z-index', '4000');
             $('.menu-logo').show(10);
@@ -54,8 +54,8 @@ $( window ).on('load', function() {
 
   function removeaccordian() {
     if ($('.menu').hasClass('menu-close')) {
-      $('.menu-elements').accordion("destroy");
-      $('.menu-info').accordion("destroy");
+      // $('.menu-elements').accordion("destroy");
+      // $('.menu-info').accordion("destroy");
     } else {
       $('.menu-elements').accordion({
         collapsible: true,
